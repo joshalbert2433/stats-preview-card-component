@@ -1,0 +1,115 @@
+:root {
+    --blueVeryDark: hsl(233, 47%, 7%);
+    --blueDesaturatedBlack: hsl(244, 38%, 16%);
+    --violetSoft: hsl(277, 91%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --whiteSlightlyTransparent1: hsla(0, 0%, 100%, 0.75);
+    --whiteSlightlyTransparent2: hsla(0, 0%, 100%, 0.6);
+
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1, p, li {
+    color: white;
+    list-style: none;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+h1 + p {
+    margin-top: 1.5rem;
+    font-size: .8rem;
+    line-height: 2;
+    opacity: .6;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+body {
+    background: var(--blueVeryDark);
+    display: grid;
+    place-items: center;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.box-a {
+    background: var(--blueDesaturatedBlack);
+    display: grid;
+    grid-template-rows: 70% 30%;
+    place-items: center;
+}
+
+.box-a-content > * {
+    padding: 0 4rem;
+}
+
+.box-a-items {
+    text-transform: uppercase;
+}
+
+.box-a-items {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    margin-left: 4rem;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.box-a-items p {
+    font-size: .6rem;
+    margin-top: .4rem;
+    opacity: .7;
+    letter-spacing: .1rem;
+}
+
+.box-b-illustration {
+    position: relative;
+}
+
+.box-b-illustration{
+    background: url(../images/image-header-desktop.jpg);
+    background-size: cover;
+    height: 22rem;
+    width: 28rem;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+.box-b-illustration::before {
+    content: "";
+    background: var(--violetSoft);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
